@@ -1,0 +1,152 @@
+body {
+	background: #0e0e0e;
+	color: #fff;
+	font-family: Arial, sans-serif;
+}
+
+.container {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+	padding: 20px 0;
+}
+
+.logo {
+	float: left;
+	font-size: 20px;
+}
+
+.nav {
+	float: right;
+}
+
+.nav a,
+.nav .icon {
+	display: inline-block;
+	margin-left: 20px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.clear {
+	clear: both;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+	text-align: center;
+	padding: 60px;
+}
+
+.avatar {
+	border-radius: 50%;
+	object-fit:cover;
+	margin-bottom: 20px;
+	
+}
+
+.prof {
+	color: #aaa;
+	margin-bottom: 30px;
+}
+
+/* inline-block + рефлекс */
+.stats {
+	font-size: 0;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px 0;
+}
+
+.stat {
+	display: inline-block;
+	width: 160px;
+	font-size: 15px;
+	vertical-align: top;
+	margin: 0 15;
+}
+.stat h3 {
+	font-size: 28px;
+	margin-bottom: 10px;
+}	
+.stat span {
+	color: #aaa;
+	font-size: 1.4px;
+	margin: 0;
+}
+
+/* ---------- BUTTONS ---------- */
+.buttons {
+	font-size: 0;
+}
+
+.btn {
+	display: inline-block;
+	padding: 12px 25px;
+	margin: 10px;
+	background: #00aaff;
+	color: #070707;
+	text-decoration: none;
+	border-radius: 6px;
+	font-size: 14px;
+}
+
+/* ---------- PORTFOLIO ---------- */
+.portfolio {
+	padding: 60px 0;
+	text-align: center;
+}
+
+.cards {
+	font-size: 0;
+}
+
+.card {
+	display: inline-block;
+	width: 320px;
+	height: 180px;
+	background: #ccc;
+	margin: 10px;
+	border-radius: 10px;
+}
+
+/* ---------- ABOUT ---------- */
+.about {
+	background: #1a9bdc;
+	padding: 50px 0;
+	text-align: center;
+	color: #0a0a0a;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+	padding: 20px;
+	text-align: center;
+	font-size: 14px;
+	color: #afacac;
+}
+.profile {
+	display: inline-block;
+	font-size: 0; /* рефлекс */
+}
+
+.profile img {
+	display: inline-block;
+	vertical-align: middle;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+}
+
+.profile-name {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 12px;
+	font-size: 16px;
+	color: #000;
+	font-weight: 500;
+}
+
