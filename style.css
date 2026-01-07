@@ -1,7 +1,14 @@
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+ 
 body {
-	background: #0e0e0e;
+    background: #0e0e0e;
 	color: #fff;
-	font-family: Arial, sans-serif;
+	font-family: "Inter", Arial, sans-serif;
 }
 
 .container {
@@ -10,17 +17,24 @@ body {
 }
 
 /* ---------- HEADER ---------- */
-.header {
+.header .container {
 	padding: 20px 0;
 }
 
 .logo {
 	float: left;
-	font-size: 20px;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: none;
+	
 }
 
 .nav {
 	float: right;
+}
+
+.header .inner {
+	 font-size: 0; /* рефлекс */
 }
 
 .nav a,
@@ -37,28 +51,39 @@ body {
 
 /* ---------- HERO ---------- */
 .hero {
+	padding: 60px 0; 
 	text-align: center;
-	padding: 60px;
+	 
 }
 
 .avatar {
-	border-radius: 50%;
-	object-fit:cover;
-	margin-bottom: 20px;
-	
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+		
+}
+.hero-name {
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .prof {
-	color: #aaa;
-	margin-bottom: 30px;
+  color: #aaa;
+  font-size: 14px;
+  margin-top: 6px;
+  text-align: center; 
 }
 
 /* inline-block + рефлекс */
 .stats {
-	font-size: 0;
+	font-size: 0; /* рефлекс */
 	text-align: center;
-	margin-top: 30px;
-	margin-bottom: 30px 0;
+	margin: 30px 0;
 }
 
 .stat {
@@ -66,31 +91,32 @@ body {
 	width: 160px;
 	font-size: 15px;
 	vertical-align: top;
-	margin: 0 15;
+	margin: 0 15px;
 }
 .stat h3 {
-	font-size: 28px;
+	font-size: 20px;
 	margin-bottom: 10px;
 }	
 .stat span {
 	color: #aaa;
-	font-size: 1.4px;
+	font-size: 14px;
 	margin: 0;
 }
 
 /* ---------- BUTTONS ---------- */
 .buttons {
-	font-size: 0;
+	text-align: center;
+	font-size: 0; /* рефлекс */
 }
 
 .btn {
 	display: inline-block;
-	padding: 12px 25px;
+	padding: 20px 80px;
 	margin: 10px;
 	background: #00aaff;
 	color: #070707;
 	text-decoration: none;
-	border-radius: 6px;
+	border-radius: 8px;
 	font-size: 14px;
 }
 
@@ -102,21 +128,31 @@ body {
 
 .cards {
 	font-size: 0;
+	text-align: center;
 }
 
 .card {
 	display: inline-block;
-	width: 320px;
+	width: 300px;
 	height: 180px;
 	background: #ccc;
 	margin: 10px;
 	border-radius: 10px;
+	vertical-align: top;
 }
+
+.card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+   
 
 /* ---------- ABOUT ---------- */
 .about {
 	background: #1a9bdc;
-	padding: 50px 0;
+	padding: 20px 0;
 	text-align: center;
 	color: #0a0a0a;
 }
@@ -126,27 +162,67 @@ body {
 	padding: 20px;
 	text-align: center;
 	font-size: 14px;
-	color: #afacac;
+	color: #f1efef;
 }
 .profile {
 	display: inline-block;
-	font-size: 0; /* рефлекс */
+    font-size: 0; /* рефлекс */
 }
 
 .profile img {
 	display: inline-block;
 	vertical-align: middle;
-	width: 48px;
-	height: 48px;
+	width: 150px;
+	height: 150px;
 	border-radius: 50%;
 }
 
-.profile-name {
+.profile-text {
 	display: inline-block;
 	vertical-align: middle;
-	margin-left: 12px;
+	margin-left: 15px;
 	font-size: 16px;
-	color: #000;
+	color: #fff;
 	font-weight: 500;
+}
+
+.header-left,
+.header-right {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  font-size: 20px;
+}
+
+.header-left {
+  text-align: left;
+}
+
+.header-right {
+  text-align: right;
+}
+
+.socials {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0; /* рефлекс */
+}
+
+.socials a {
+  display: inline-block;
+  margin: 0 8px;
+  font-size: 16px;
+  color: #f3eeee;
+  
+}
+
+.socials img.linkedin {
+  border-radius: 0; /* LinkedIn квадратный */
+}
+
+.socials img {
+  width: 18px;
+  height: 18px;
+  
 }
 
