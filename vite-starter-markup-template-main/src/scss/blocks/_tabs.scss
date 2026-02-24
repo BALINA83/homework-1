@@ -1,0 +1,95 @@
+@use '../vars' as v;
+
+
+.tabs {
+  padding: 30px 0;
+
+  &__container {
+    @media (min-width: v.$breakpoint-lg) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    display: none;
+  }
+
+  &__links {
+    display: flex;
+    gap: 30px;
+    overflow: auto hidden;
+    margin-right: -30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    @media (min-width: v.$breakpoint-md) {
+      margin-right: calc(-50vw + 324px);
+    }
+
+    @media (min-width: v.$breakpoint-lg) {
+      margin-right: 0;
+      padding: 0 64px 0 0;
+      overflow: hidden;
+      flex-flow: column;
+      flex: 0 1 auto;
+      border-right: 4px solid rgba(255, 255, 255, 0.3);
+      align-items: flex-end;
+    }
+  }
+
+  &__links-item {
+    @include v.subtitle;
+
+    white-space: nowrap;
+    cursor: pointer;
+
+    @include v.hover {
+      color: var(--accent-color);
+    }
+
+    &:active {
+      color: var(--accent-color);
+    }
+
+    &.active {
+      @include v.text-gradient(var(--red-reversed-gradient));
+    }
+  }
+
+  &__content {
+    color: var(--white-color);
+    padding-top: 34px;
+    border-top: 4px solid rgba(255, 255, 255, 0.3);
+
+    @media (min-width: v.$breakpoint-lg) {
+      border-top: 0;
+      flex: 1 1 50%;
+      padding: 0 0 0 60px;
+    }
+  }
+
+  &__content-item {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__content-title {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  &__content-desc {
+    font-size: 19px;
+    line-height: 30px;
+  }
+}
+

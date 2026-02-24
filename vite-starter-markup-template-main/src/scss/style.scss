@@ -1,0 +1,140 @@
+@use "fonts";
+@use "reset";
+@use "vars";
+@use "global";
+@use "main";
+@use "switch";
+@use "badges";
+@use "blocks/services";
+@use "./blocks/header";
+@use "./blocks/hero";
+@use "blocks/team";
+@use "./blocks/tabs";
+
+
+/* ========= CONTAINER ========= */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ========= HEADER ========= */
+.header {
+  padding: 20px 0;
+  
+  color: white;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.dark-section {
+  background: linear-gradient(
+    180deg,
+    #323264 0%,
+    #323264 60%,
+    #643E72 120%
+  );
+}
+
+
+/* ========= LOGO ========= */
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+
+/* ========= NAV ========= */
+.nav {
+  display: flex;
+  gap: 30px;
+
+  &__link {
+    color: white;
+    font-weight: 500;
+    transition: .3s;
+  }
+
+  &__link:hover {
+    color: #f0145a;
+  }
+}
+
+
+/* ========= BURGER ========= */
+.menu-toggle {
+  display: none;
+  width: 30px;
+  height: 22px;
+  flex-direction: column;
+  justify-content: space-between;
+
+  span {
+    height: 3px;
+    width: 100%;
+    background: white;
+  }
+}
+
+
+/* ========= HERO ========= */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 120px 0;
+
+  
+  color: white;
+
+  &__inner {
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 56px;
+    margin-bottom: 40px;
+  }
+}
+
+
+/* ========= SERVICES ========= */
+
+
+  
+/* ========= MOBILE ========= */
+@media (max-width: 768px) {
+
+  .nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .hero__title {
+    font-size: 32px;
+  }
+
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.test {
+padding: 60px 0;
+}
+
+.test__list {
+display: flex;
+flex-wrap: wrap;
+}
+
