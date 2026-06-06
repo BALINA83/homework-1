@@ -135,7 +135,7 @@
 }
 
 .clients__title {
-  text-align: center;   // центрирует текст
+  text-align: center;   
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -342,7 +342,7 @@ background: #0a0a0a;
 .publications__label {
   font-size: 14px;
   font-weight: 700;
-  color: #24a3ff; // цвет маленькой надписи
+  color: #24a3ff; 
   display: flex;
   align-items: center;
   gap: 6px;
@@ -356,9 +356,8 @@ background: #0a0a0a;
   margin-bottom: 40px;
   color: #f76b6b;
    
-  
- // цвет заголовка можно под макет
-}
+  }  
+
 
 .publications__grid {
   display: grid;
@@ -369,7 +368,7 @@ background: #0a0a0a;
 .publication {
   background: #ffffff;
   border-radius: 12px;
-  overflow: hidden; // чтобы скругление работало на картинке
+  overflow: hidden; 
   display: flex;
   flex-direction: column;
 }
