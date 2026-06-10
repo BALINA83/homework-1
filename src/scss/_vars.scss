@@ -1,0 +1,114 @@
+:root {
+	
+	--second-color: #161618;
+	--mute-color: #313136;
+	--main-text-color: rgba(255, 255, 245, .86);
+	--second-text-color: rgba(235, 235, 245, .6);
+	--hero-name-background: linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+	--brand-color: #646cff;
+	--brand-light-color: #747bff;
+}
+[data-theme="light"] {
+	--main-color: rgba(255, 255, 245, .86);
+	--second-color: #fff;
+	--mute-color: rgba(235, 235, 245, .6);
+	--main-text-color: #161618;
+	--second-text-color: #1e1e20;
+}
+
+:root {
+  --white-color: #fff;
+
+  --main-color: #323264;
+  --main-alt-color: #46466e;
+  --main-soft-color: #686887;
+
+  --accent-color: #ae0f3d;
+
+  --brand-regular-color: #24a3ff;
+  --brand-hover-color: #0085ff;
+  --brand-active-color: #006ccf;
+  --brand-box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.5);
+
+  --grey-bg-color: #f5f5fa;
+  --grey-bg-alt-color: #ededf7;
+  --grey-text-color: #b3b3ba;
+  --grey-separator-color: #e6e6f0;
+
+  --main-gradient: linear-gradient(130deg, #323264 70%, #a54b5f);
+  --soft-gradient: linear-gradient(42deg, #323264 50%, #7a425e 88%);
+  --red-gradient: linear-gradient(325deg, #ae0f3d 5%, #693264 70%);
+  --super-soft-gradient: linear-gradient(230deg, #323264 60%, #643e72 90%);
+
+  --red-text-gradient: linear-gradient(90deg, #ae0f3d, #ef8080);
+  --red-reversed-gradient: linear-gradient(270deg, #ae0f3d, #ef8080);
+}
+
+// font
+$main-font: 'Montserrat', sans-serif;
+
+// rad-es
+$rounded-sm: 8px;
+$rounded-md: 12px;
+$rounded-lg: 24px;
+$rounded-full: 50%;
+
+// breakpoints
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1440px;
+$breakpoint-xxl: 1920px;
+
+// transition
+$transition-deley: 0.3s ease-in-out;
+
+// mixins
+@mixin subtitle($color: var(--grey-text-color)) {
+  font-size: 30px;
+  font-weight: 700;
+  color: $color;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: 38px;
+  }
+}
+
+@mixin flex($justify-content: space-between, $align-items: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover:not(.active) {
+      @content;
+    }
+  }
+}
+
+@mixin link($default-color: var(--brand-regular-color)) {
+  color: $default-color;
+  text-decoration: none;
+  transition: color $transition-deley;
+
+  @include hover {
+    color: var(--accent-color);
+  }
+
+  &:active {
+    color: var(--brand-active-color);
+  }
+}
+
+@mixin text-gradient($gradient: var(--red-gradient)) {
+  color: transparent;
+  background: $gradient;
+  background-clip: text;
+}
+
+// @mixin viewport-md {
+//   @media (min-width: $breakpoint-md) {
+//     @content;
+//   }
+// }

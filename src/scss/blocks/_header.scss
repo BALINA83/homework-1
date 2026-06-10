@@ -1,0 +1,333 @@
+@use "../vars" as v;
+// HEAD
+.head {
+  
+
+  @include v.flex(space-between, stretch);
+
+  flex-direction: column;
+  min-height: 100vh;
+ 
+  min-height: 100vh;
+  background: url('/src/img/img/icons/hlegal-symbol.svg') no-repeat center/auto 100%;;
+  
+  position: relative;
+  overflow: hidden;
+
+
+
+
+ 
+   
+ 
+
+  &__title {
+    color: var(--white-color);
+    font-size: 38px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__link {
+    width: 42px;
+    height: 42px;
+    border-radius: v.$rounded-full;
+    color: var(--white-color);
+    border: 2px solid var(--white-color);
+    margin: 0 auto 30px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 9px;
+      left: 12px;
+      width: 14px;
+      height: 14px;
+      border-bottom: 2px solid var(--white-color);
+      border-left: 2px solid var(--white-color);
+      transform: rotate(-45deg);
+    
+    }
+  }
+ 
+ }
+// HEADER
+.header {
+  @media (min-width: v.$breakpoint-md) {
+    padding-top: 50px;
+  }
+
+  &__container {
+    @media (min-width: v.$breakpoint-md) {
+      display: flex;
+      flex-flow: column;
+      gap: 30px;
+    }
+
+    @media (min-width: v.$breakpoint-lg) {
+      position: relative;
+      gap: 16px;
+    }
+  }
+    
+
+
+  &__inner {
+    @include v.flex;
+
+    
+    padding: 10px 15px;
+    background: rgba(245, 245, 250, 0.2);
+
+    @media (min-width: v.$breakpoint-md) {
+      margin: 0;
+      padding: 0;
+      background: none;
+      justify-content: flex-start;
+      gap: 4px;
+    }
+
+    @media (min-width: v.$breakpoint-lg) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__lang {
+    display: flex;
+    gap: 5px;
+  }
+
+  &__lang-item {
+    cursor: pointer;
+    padding: 4px 6px;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-radius: v.$rounded-sm;
+    color: var(--white-color);
+    transition: 0.3s;
+
+  &:hover {
+  background: #F0145A;
+} 
+
+    &.active {
+      background: var(--accent-color);
+      color: white;
+    }
+  }
+
+  &__address {
+    font-size: 18px;
+    opacity: 0.8;
+    display: none;
+
+    @media (min-width: v.$breakpoint-md) {
+      display: block;
+      color: var(--white-color);
+    }
+  }
+
+.header__phone::before,
+.header__address::before  {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--white-color);
+  border-radius: 50%;
+  margin: 0 0px;
+}
+
+.header__inner > * + *::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--white-color);
+  
+  border-radius: 50%;
+  margin: 0 0px;
+  vertical-align: middle;
+}
+
+
+
+  &__phone {
+    @include v.link(var(--white-color));
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  &__social {
+    display: none;
+    width: 24px;
+    height: 24px;
+    background: white;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.3s;
+
+    @media (min-width: v.$breakpoint-md) {
+      @include v.link(var(--white-color));
+
+      display: flex;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: white;
+      transition: 0.3s;
+    }
+  
+
+ 
+  
+ }
+ .header__nav-link {
+  color: var(--white-color);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.header__nav-link:hover {
+  color: #f0145a;
+}
+ 
+
+  &__box {
+    @include v.flex;
+
+    margin: 0 -15px;
+    padding: 15px 0 10px;
+
+    @media (min-width: v.$breakpoint-md) {
+      margin: 0;
+      padding: 0;
+    }
+
+    @media (min-width: v.$breakpoint-lg) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 30px;
+    }
+  }
+
+  &__box-logo {
+    img {
+      @media (min-width: v.$breakpoint-md) {
+        width: 130px;
+        height: 60px;
+      }
+    }
+  }
+
+  &__box-burger {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+
+    @media (min-width: v.$breakpoint-md) {
+      display: none;
+    }
+
+    &::before,
+    &::after,
+    span {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 6px;
+      right: 6px;
+      height: 2px;
+      background: var(--white-color);
+    }
+
+    &::after {
+      top: auto;
+      bottom: 8px;
+    }
+
+    span {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__nav {
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    left: 8px;
+    right: 8px;
+    background: #000;
+    padding: 12px;
+    border-top-left-radius: v.$rounded-md;
+    border-top-right-radius: v.$rounded-md;
+    transform: translateY(110%);
+    transition: transform v.$transition-deley;
+
+    &.active {
+      transform: translateY(0);
+    }
+
+    @media (min-width: v.$breakpoint-md) {
+      position: static;
+      background: transparent;
+      padding: 0;
+      border: 0;
+      transform: translateY(0);
+    }
+  }
+
+  &__nav-close {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: block;
+    margin: 0 0 20px auto;
+
+    @media (min-width: v.$breakpoint-md) {
+      display: none;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+
+    @media (min-width: v.$breakpoint-md) {
+      flex-flow: row;
+    }
+
+    @media (min-width: v.$breakpoint-lg) {
+      justify-content: flex-end;
+    }
+  }
+
+   
+  
+
+  &__nav-link {
+    @include v.link(var(--white-color));
+
+    text-transform: lowercase;
+    font-weight: 700;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+
+    @include v.hover {
+      border-color: var(--accent-color);
+    }
+  }
+ }
