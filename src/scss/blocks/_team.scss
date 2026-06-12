@@ -185,7 +185,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.5);
-  background: url('/src/img/webp/css_sprites.webp') no-repeat;
+  background: url('../../img/css_sprites.png') no-repeat;
 }
 .clients__list li:nth-child(1) {
  background: #1c4280;
@@ -222,7 +222,7 @@
  &::before {
     width: 360px;
    height: 84px;
-   background: url('/src/img/webp/css_sprites.webp') -2px -150px;
+   background-position: -2px -150px;
   }
  }
  .clients__list li:nth-child(5) {
@@ -243,7 +243,7 @@
  &::before {
  width: 374px;
  height: 96px;
-  background: url('/src/img/webp/css_sprites.webp') -2px -518px;
+  background-position:  -2px -518px;
   }
  }
 
@@ -263,7 +263,7 @@ background: #c71c36;
   &::before {
     width: 378px;
     height: 92px;
-    background: url('/src/img/webp/css_sprites.webp') -2px -422px;
+    background-position:  -2px -422px;
    }
  }
 
@@ -273,7 +273,7 @@ background: #c71c36;
   &::before {
     width: 362px;
     height: 76px;
-    background: url('/src/img/webp/css_sprites.webp') -2px -70px;
+    background-position:  -2px -70px;
   }
  }
 
