@@ -331,3 +331,38 @@
     }
   }
  }
+ @media (max-width: 767px) {
+  .header__address,
+  .header__social,
+  .header__inner > * + *::before {
+    display: none;
+  }
+
+  .header__inner {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__bottom {
+    margin-top: 16px;
+  }
+
+  .header__left {
+    top: 0;
+  }
+
+  .header__logo img {
+    width: 110px;
+    height: auto;
+  }
+
+  .header__slash {
+    font-size: 28px;
+    top: -4px;
+  }
+
+  .header__page {
+    font-size: 24px;
+    top: -4px;
+  }
+}
