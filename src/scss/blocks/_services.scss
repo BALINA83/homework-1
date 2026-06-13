@@ -424,3 +424,36 @@
   top: -30px;
   
 }
+@media (max-width: 768px) {
+
+  .service-hero {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .service-hero__title {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .service-hero__text {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .service-hero__icon {
+    margin-bottom: 24px;
+  }
+
+  .header__inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .header__nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+}
