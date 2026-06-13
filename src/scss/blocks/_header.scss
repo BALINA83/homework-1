@@ -333,9 +333,12 @@
  }
  @media (max-width: 767px) {
   .header__address,
-  .header__social,
   .header__inner > * + *::before {
     display: none;
+  }
+
+  .header__social {
+    display: flex;
   }
 
   .header__inner {
@@ -344,11 +347,12 @@
   }
 
   .header__bottom {
-    margin-top: 16px;
+    margin-top: 20px;
   }
 
   .header__left {
     top: 0;
+    gap: 12px;
   }
 
   .header__logo img {
@@ -358,11 +362,12 @@
 
   .header__slash {
     font-size: 28px;
-    top: -4px;
+    top: 0;
+    margin-left: 0;
   }
 
   .header__page {
     font-size: 24px;
-    top: -4px;
+    top: 0;
   }
 }
