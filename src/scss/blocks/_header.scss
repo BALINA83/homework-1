@@ -337,13 +337,19 @@
     display: none;
   }
 
-  .header__social {
+  .header__inner {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    padding: 8px 12px;
   }
 
-  .header__inner {
-    justify-content: space-between;
-    align-items: center;
+  .header__social {
+    display: flex;
+    width: 24px;
+    height: 24px;
   }
 
   .header__bottom {
@@ -352,22 +358,22 @@
 
   .header__left {
     top: 0;
-    gap: 12px;
+    gap: 16px;
   }
 
   .header__logo img {
-    width: 110px;
+    width: 120px;
     height: auto;
   }
 
   .header__slash {
-    font-size: 28px;
+    font-size: 34px;
     top: 0;
     margin-left: 0;
   }
 
   .header__page {
-    font-size: 24px;
+    font-size: 28px;
     top: 0;
   }
 }
