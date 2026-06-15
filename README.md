@@ -50,8 +50,14 @@ https://github.com/BALINA83/homework-1
 
  👩‍💻 Author
 
-**Alina Bessonova**
+**Alina Bezsonova**
 
 Junior Frontend Developer
 
-GitHub: https://github.com/BALINA83
+🌐 Portfolio:
+https://balina83.github.io/portfolio/
+
+💻 GitHub:
+https://github.com/BALINA83
+
+
